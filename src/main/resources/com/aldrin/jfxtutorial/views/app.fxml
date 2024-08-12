@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="AnchorPane" prefHeight="765.0" prefWidth="1067.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aldrin.jfxtutorial.AppController">
+   <left>
+      <Pane prefHeight="359.0" prefWidth="142.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fillWidth="false" prefHeight="62.0" prefWidth="142.0">
+               <children>
+                  <JFXButton alignment="TOP_LEFT" lineSpacing="10.0" onAction="#student" prefHeight="25.0" prefWidth="153.0" stylesheets="@../css/bootstrap2.css" text="Student">
+                     <graphic>
+                        <FontAwesomeIconView fill="#1b4c9a" glyphName="USERS" size="18.0" stroke="BLACK" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="primary" />
+                        <String fx:value="action-btn" />
+                        <String fx:value="middle" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_LEFT" onAction="#course" prefHeight="25.0" prefWidth="142.0" ripplerFill="#f5f2f2" stylesheets="@../css/bootstrap2.css" text="Course" textAlignment="RIGHT" wrapText="true">
+                     <graphic>
+                        <FontAwesomeIconView fill="#134ca8" glyphName="GRADUATION_CAP" size="18.0" stroke="#321a1a" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="primary" />
+                        <String fx:value="action-btn" />
+                        <String fx:value="middle" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="7.0" right="5.0" top="5.0" />
+               </padding></VBox>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="368.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="contentArea" prefHeight="574.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane minHeight="42.0" minWidth="80.0" prefHeight="42.0" prefWidth="879.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="46.0" prefWidth="879.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="27.0" prefWidth="879.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane fx:id="titledPane" onMouseDragged="#mouseDragged" onMousePressed="#mousePressed" prefHeight="37.0" prefWidth="879.0" styleClass="label" stylesheets="@../css/styles.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label fx:id="lblTitle" layoutX="9.0" onMouseDragged="#mouseDragged" onMousePressed="#mousePressed" prefHeight="39.0" prefWidth="861.0" style="-fx-background-color: #3C3C3C;" text="  STUDENT REGISTRATION SYSTEM" textFill="WHITE" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                           <graphic>
+                              <JFXButton minHeight="38.0" minWidth="38.0" prefHeight="38.0" prefWidth="38.0">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../registration.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </graphic>
+                        </Label>
+                        <HBox prefHeight="30.0" prefWidth="95.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXButton fx:id="minimizeButton" minHeight="30.0" minWidth="30.0" onAction="#minimizeWindow" prefHeight="30.0" prefWidth="30.0" stylesheets="@../css/bootstrap2.css" textFill="WHITE">
+                                 <styleClass>
+                                    <String fx:value="middle" />
+                                    <String fx:value="success" />
+                                 </styleClass>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="WINDOW_MINIMIZE" size="12" />
+                                 </graphic>
+                              </JFXButton>
+                              <Button fx:id="maximizeButton" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#maximizeWindow" prefWidth="30.0" stylesheets="@../css/bootstrap2.css">
+                                 <styleClass>
+                                    <String fx:value="middle" />
+                                    <String fx:value="primary" />
+                                 </styleClass>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#fffefe" glyphName="WINDOW_MAXIMIZE" size="16" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="closeButton" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="30.0" stylesheets="@../css/bootstrap2.css">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="18" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="middle" />
+                                    <String fx:value="danger" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
