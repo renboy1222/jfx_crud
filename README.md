@@ -17,3 +17,6 @@ Update Student dialog
 
 Delete Student confirmation
 ![Screenshot 2024-08-12 155557](https://github.com/user-attachments/assets/410b9e97-70b3-4eb2-b57a-0f8755bc7079)
+
+Relational Schema 
+![schema](https://github.com/user-attachments/assets/4834967a-0fef-46e2-ab18-e8ca0aca72c9)
