@@ -1,4 +1,4 @@
-Able to run this javafx application watch the video from my youtube channel
+Able to run this javafx application smoothly, watch the videos from my youtube channel
 
 JavaFx Installation
 URL:https://youtu.be/ktYMUHGHfkU
